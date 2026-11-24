@@ -4,6 +4,8 @@ import { LEGACY_REDIRECTS } from "./src/lib/legacy-routes";
 // No environment access here on purpose: the build must succeed without any runtime settings.
 // The /api/* proxy lives in src/proxy.ts so API_ORIGIN is read at runtime.
 const nextConfig: NextConfig = {
+  // Inlined at build time so the demo switch also reaches the edge proxy, where netlify.toml build variables are not set.
+  env: { DEMO_DATA: process.env.DEMO_DATA ?? "" },
   // Netlify builds with its own Next runtime, which does not want the standalone bundle used for the Docker image.
   output: process.env.NETLIFY ? undefined : "standalone",
   // Pin Turbopack to this project so a stray lockfile higher up the filesystem is never picked as the root.

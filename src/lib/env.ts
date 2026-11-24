@@ -25,7 +25,10 @@ export type AppEnv = {
  * Safe defaults for a non-production environment: noindex ON unless explicitly
  * set to "false", basic auth OFF unless both user and password are provided.
  */
-export function parseEnv(raw: Record<string, string | undefined>): AppEnv {
+export function parseEnv(input: Record<string, string | undefined>): AppEnv {
+  // Demo deployment (DEMO_DATA=1 is inlined at build time, see next.config.ts): nothing is ever fetched, so a missing
+  // API_ORIGIN is filled with a placeholder instead of crashing the proxy and every page. Not applied outside demo builds.
+  const raw = process.env.DEMO_DATA === "1" && !input.API_ORIGIN ? { ...input, API_ORIGIN: "https://demo.invalid" } : input;
   const result = RawEnvSchema.safeParse(raw);
   if (!result.success) {
     const detail = result.error.issues.map((i) => `${i.path.join(".")}: ${i.message}`).join("; ");
