@@ -1,0 +1,92 @@
+.page {
+  padding-block: clamp(40px, 7vw, 88px);
+}
+
+.narrow {
+  max-width: 760px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 14px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-primary-deep);
+}
+
+.title {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  font-weight: 700;
+  letter-spacing: -0.035em;
+}
+
+.meta,
+.lede {
+  color: var(--color-muted);
+}
+
+.lede {
+  margin: 16px 0 0;
+  font-size: 1.1rem;
+  color: var(--color-ink-soft);
+}
+
+.prose h2 {
+  margin: 40px 0 12px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.prose p,
+.prose li {
+  color: var(--color-ink-soft);
+}
+
+.prose a {
+  color: var(--color-primary-deep);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.prose code {
+  padding: 1px 6px;
+  border-radius: 6px;
+  background: var(--color-bg-cool);
+  font-size: 0.9em;
+}
+
+.prose ul {
+  padding-left: 1.25rem;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  margin-block: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+}
+
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.prose th,
+.prose td {
+  padding: 12px 14px;
+  text-align: left;
+  vertical-align: top;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.prose th {
+  background: var(--color-bg-wash);
+  font-weight: 600;
+}
+
+.prose tr:last-child td {
+  border-bottom: 0;
+}

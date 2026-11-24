@@ -1,0 +1,12 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. handlePortalHome gate branch (also what a blocked learner sees), portalGateBody app.js:8204",
+  "request": {
+    "method": "GET",
+    "path": "/api/portal/home"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "state": "not_paid"
+  }
+}

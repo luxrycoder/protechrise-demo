@@ -1,0 +1,13 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. handleApplicationSubmit, app.js:1510 (SQLITE_BUSY branch)",
+  "request": {
+    "method": "POST",
+    "path": "/api/applications"
+  },
+  "status": 503,
+  "body": {
+    "ok": false,
+    "retryable": true,
+    "error": "The site is busy right now, so your application was not saved yet. Please try again in a moment."
+  }
+}

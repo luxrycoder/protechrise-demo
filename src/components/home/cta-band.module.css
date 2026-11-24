@@ -1,0 +1,14 @@
+.cta { position: relative; overflow: hidden; padding: clamp(64px, 9vw, 120px) 0; background: var(--night); color: #fff; }
+.rail { position: absolute; left: 0; right: 0; bottom: 38px; height: 14px; background: #1f2937; }
+.rail::after { content: ""; position: absolute; inset: 0; background: var(--color-accent-mint); transform-origin: left; animation: run 5s var(--ease-glide) infinite alternate; }
+@keyframes run { from { transform: scaleX(.05); } to { transform: scaleX(.92); } }
+.inner { position: relative; display: grid; justify-items: start; gap: 18px; padding-bottom: 60px; }
+.kicker { color: var(--emerald-300); }
+.title { margin: 0; max-width: 16ch; font-size: clamp(2.4rem, 6vw, 5rem); font-weight: 800; line-height: .96; letter-spacing: -.045em; }
+.body { margin: 0; max-width: 38rem; font-size: 1.15rem; color: #d1d5db; }
+.button { gap: 10px; padding: 1rem 1.7rem; font-size: 1.05rem; box-shadow: 5px 5px 0 #fff; }
+.button:hover { transform: translate(2px, 2px); box-shadow: 3px 3px 0 #fff; }
+.note { margin: 0; font-family: var(--font-mono); font-size: .8rem; letter-spacing: .08em; text-transform: uppercase; color: #9ca3af; }
+.peep { position: absolute; right: 0; bottom: 14px; }
+@media (max-width: 860px) { .peep { display: none; } }
+@media (prefers-reduced-motion: reduce) { .rail::after { animation: none; transform: scaleX(.6); } }

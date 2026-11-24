@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/status/request-link",
+    "body": {
+      "email": "not-an-email"
+    }
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "message": "If that email has an application on file, we've sent a status link."
+  }
+}

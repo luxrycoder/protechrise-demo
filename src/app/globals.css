@@ -1,0 +1,250 @@
+/* Design tokens: the "Evening Line" system (see protechrise-design-system/). Every existing --color-* name and value is
+   unchanged; the semantic names below are what new components should use. */
+:root {
+  /* Existing palette (waitlist-api/DESIGN.md) */
+  --color-primary: #059669;
+  --color-primary-deep: #047857;
+  --color-primary-pressed: #065f46;
+  --color-primary-tint: #d1fae5;
+  --color-accent-mint: #34d399;
+  --color-ink: #111827;
+  --color-ink-soft: #1f2937;
+  --color-muted: #6b7280;
+  --color-border: #e5e7eb;
+  --color-bg: #ffffff;
+  --color-bg-wash: #f0fdf4;
+  --color-bg-cool: #f8fafc;
+
+  /* Evening Line extensions: the emerald scale and the five track-family lines */
+  --emerald-50: #ecfdf5;
+  --emerald-200: #a7f3d0;
+  --emerald-300: #6ee7b7;
+  --emerald-900: #064e3b;
+  --emerald-950: #022c22;
+  --night: #0d131d;
+  --line-build: #047857;
+  --line-build-bright: #059669;
+  --line-infra: #1d4ed8;
+  --line-infra-bright: #2563eb;
+  --line-data: #6d28d9;
+  --line-data-bright: #7c3aed;
+  --line-product: #c2410c;
+  --line-product-bright: #f97316;
+  --line-biz: #92400e;
+  --line-biz-bright: #d97706;
+  --tone-sand: #ffedd5;
+  --tone-blue: #dbeafe;
+  --tone-purple: #ede9fe;
+  --tone-orange: #f97316;
+
+  /* Semantic */
+  --text: var(--color-ink);
+  --text-soft: var(--color-ink-soft);
+  --text-muted: var(--color-muted);
+  --surface: var(--color-bg);
+  --primary: var(--color-primary-deep);
+  --primary-ink: var(--color-primary-deep);
+  --primary-bright: var(--color-primary);
+  --signal-red: #b91c1c;
+
+  --font-mono: var(--font-mono-face), ui-monospace, Menlo, monospace;
+
+  --radius-button: 10px;
+  --radius-card: 14px;
+  --radius-card-lg: 18px;
+  --radius-panel: 1.5rem;
+  --radius-pill: 999px;
+
+  --shadow-1: 0 2px 6px rgb(15 23 42 / 0.05), 0 12px 28px rgb(15 23 42 / 0.09);
+  --shadow-2: 0 4px 10px rgb(15 23 42 / 0.06), 0 18px 40px rgb(15 23 42 / 0.12), 0 44px 90px rgb(15 23 42 / 0.16);
+  --ease-glide: cubic-bezier(0.45, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.2, 0.8, 0.2, 1);
+  --ease-spring: cubic-bezier(0.3, 1.4, 0.5, 1);
+
+  --container: clamp(1200px, 90vw, 1840px);
+  --gutter: clamp(16px, 4vw, 40px);
+
+  /* Height of the track page's sticky Apply bar; other fixed elements use it to sit above the bar. */
+  --sticky-apply-height: 72px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-body), system-ui, sans-serif;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display), system-ui, sans-serif;
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
+.container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: var(--radius-button);
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease, transform 0.15s var(--ease-out);
+}
+
+.btn-primary {
+  background: var(--color-primary-deep);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-primary-pressed);
+}
+
+.btn-ghost {
+  border-color: var(--color-border);
+  color: var(--color-ink);
+}
+
+.btn-mint {
+  background: var(--color-accent-mint);
+  color: var(--color-ink);
+}
+
+.btn-mint:hover {
+  background: var(--emerald-300);
+}
+
+.btn-ink {
+  background: var(--color-ink);
+  color: #fff;
+}
+
+.btn-ink:hover {
+  background: var(--color-ink-soft);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-ghost:hover {
+  border-color: var(--color-primary);
+}
+
+/* The header floats over the page; pages below it start clear of it, and the home hero opts out. */
+:root {
+  --header-h: 96px;
+}
+
+main {
+  padding-top: var(--header-h);
+}
+
+.sec {
+  padding-block: clamp(48px, 8vw, 96px);
+}
+
+.sec-title {
+  font-size: clamp(1.8rem, 3.5vw, 3rem);
+  font-weight: 700;
+}
+
+/* Visible to screen readers only. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Printing a page that marks itself printable (the learner portal's receipt): hide the site header and footer. */
+@media print {
+  body:has([data-portal-receipt]) > header,
+  body:has([data-portal-receipt]) > footer { display: none; }
+}
+
+/* Mono label used for station names, weeks and board text. */
+.mono-label {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+/* Scroll reveal (see components/reveal.tsx) */
+[data-reveal] {
+  transition: opacity 0.8s var(--ease-out) var(--reveal-delay, 0ms), transform 0.8s var(--ease-out) var(--reveal-delay, 0ms);
+}
+
+[data-reveal="hidden"] {
+  opacity: 0;
+}
+
+[data-reveal="hidden"][data-from="up"] {
+  transform: translateY(48px);
+}
+
+[data-reveal="hidden"][data-from="left"] {
+  transform: translateX(-72px);
+}
+
+[data-reveal="hidden"][data-from="right"] {
+  transform: translateX(72px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [data-reveal="hidden"] {
+    opacity: 1;
+    transform: none;
+  }
+}

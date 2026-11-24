@@ -1,0 +1,15 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/claim/accept",
+    "body": {
+      "token": "bogus",
+      "accepted": true
+    }
+  },
+  "status": 404,
+  "body": {
+    "ok": false,
+    "error": "This link is not valid any more."
+  }
+}

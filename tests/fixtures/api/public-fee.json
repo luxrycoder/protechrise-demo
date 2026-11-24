@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/public-fee"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "fee": "₦19,500"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/referrer/apply",
+    "body": {}
+  },
+  "status": 400,
+  "body": {
+    "ok": false,
+    "error": "A name and a valid email are required."
+  }
+}

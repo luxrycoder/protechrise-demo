@@ -1,0 +1,95 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. handlePortalHome, app.js:8186 (cleared learner) + lib/portal-home.js buildHome",
+  "request": {
+    "method": "GET",
+    "path": "/api/portal/home"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "state": "eligible",
+    "learner": {
+      "firstName": "Ada",
+      "track": "Data Analysis",
+      "cohortName": "Cohort 1",
+      "studentId": "PTR-0001"
+    },
+    "schedule": {
+      "startsAt": "2027-02-01T08:00:00.000Z",
+      "lmsOpensAt": "2027-02-01T07:00:00.000Z",
+      "cohortTimezone": "Africa/Lagos",
+      "learnerTimezone": "Europe/London"
+    },
+    "pod": {
+      "name": "Pod 4",
+      "state": "ready"
+    },
+    "receipt": {
+      "studentId": "PTR-0001",
+      "amountText": "\u20a65,000",
+      "paidAt": "2026-11-02T10:15:00.000Z",
+      "reference": "\u2026ab12cd"
+    },
+    "community": {
+      "state": "ready",
+      "url": "/community"
+    },
+    "items": {
+      "tasks": [
+        {
+          "id": 1,
+          "title": "Confirm your laptop",
+          "body": "You have a working laptop.",
+          "linkUrl": null,
+          "taskType": "confirm",
+          "required": true,
+          "done": false
+        },
+        {
+          "id": 2,
+          "title": "Code of conduct",
+          "body": "Read and accept.",
+          "linkUrl": "https://protechrise.com/privacy",
+          "taskType": "consent",
+          "required": true,
+          "done": false,
+          "contentHash": "0123abcd"
+        },
+        {
+          "id": 3,
+          "title": "Welcome note",
+          "body": null,
+          "linkUrl": null,
+          "taskType": "info",
+          "required": false,
+          "done": false
+        }
+      ],
+      "announcements": [
+        {
+          "id": 4,
+          "title": "Welcome",
+          "body": "We start soon.",
+          "publishedAt": "2026-11-03T09:00:00.000Z"
+        }
+      ],
+      "events": [
+        {
+          "id": 5,
+          "title": "Orientation",
+          "body": null,
+          "startsAt": "2027-01-30T16:00:00.000Z",
+          "linkUrl": "https://example.com/join"
+        }
+      ]
+    },
+    "lms": {
+      "state": "not_open",
+      "opensAt": "2027-02-01T07:00:00.000Z"
+    },
+    "support": {
+      "text": "Reply to your payment receipt email and we will sort it out.",
+      "url": "mailto:help@example.com"
+    }
+  }
+}

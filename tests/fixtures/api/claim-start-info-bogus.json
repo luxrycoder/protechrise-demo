@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/claim/start-info?token=bogus"
+  },
+  "status": 404,
+  "body": {
+    "ok": false,
+    "error": "This link is not valid any more."
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. handleClaimConfirmed, app.js:7696 (webhook not received yet)",
+  "request": {
+    "method": "GET",
+    "path": "/api/claim/confirmed?ref=REF"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "found": true,
+    "paid": false,
+    "firstName": "Ada",
+    "studentId": null,
+    "amountMinor": 1950000,
+    "currency": "NGN",
+    "amountCategory": "discounted",
+    "cohortStartDate": null,
+    "claimUrl": "/claim?token=TOKEN",
+    "claimDeadline": "2026-10-08T14:30:00Z",
+    "fixedPayment": false,
+    "communityConfigured": false
+  }
+}

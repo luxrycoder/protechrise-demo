@@ -1,0 +1,29 @@
+.footer {
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg-cool);
+  padding-block: 32px;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.note {
+  margin: 0;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.links a:hover {
+  color: var(--color-primary-deep);
+}

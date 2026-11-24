@@ -1,0 +1,671 @@
+/* Home hero: a paper collage of cut-out learners on one emerald line. Sizes inside the collage use container units (cqw),
+   so the whole composition scales with its box instead of needing a breakpoint per element. */
+
+.hero {
+  margin-top: calc(-1 * var(--header-h));
+  padding-top: var(--header-h);
+  overflow: hidden;
+  background: var(--color-bg);
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr);
+  gap: clamp(8px, 3vw, 40px);
+  align-items: center;
+  padding-block: clamp(28px, 4vw, 56px) clamp(40px, 6vw, 80px);
+  min-height: min(880px, calc(100vh - var(--header-h) + 40px));
+}
+
+.copy {
+  position: relative;
+  z-index: 3;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 22px;
+  padding: 7px 15px 7px 12px;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 35%, transparent);
+  border-radius: var(--radius-pill);
+  background: var(--color-primary-tint);
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--color-primary-pressed);
+}
+
+.pulse {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  animation: pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  50% {
+    opacity: 0.35;
+    transform: scale(0.65);
+  }
+}
+
+.title {
+  margin: 0;
+  font-size: clamp(2.6rem, 5.1vw, 8rem);
+  font-weight: 800;
+  line-height: 0.93;
+  letter-spacing: -0.045em;
+  text-wrap: balance;
+}
+
+.line {
+  display: block;
+  animation: stampIn 0.7s var(--ease-spring) both;
+}
+
+.l1 {
+  animation-delay: 0.05s;
+}
+
+.l2 {
+  animation-delay: 0.2s;
+}
+
+.l3 {
+  animation-delay: 0.36s;
+  margin-top: 0.1em;
+}
+
+/* "Future." sits on an ink block with a hard emerald shadow, like a label stuck on the page. */
+.title em {
+  display: inline-block;
+  padding: 0.02em 0.16em 0.08em;
+  font-style: normal;
+  color: #fff;
+  background: var(--color-ink);
+  box-shadow: 0.07em 0.07em 0 var(--color-accent-mint);
+  transform: rotate(-1.6deg);
+}
+
+@keyframes stampIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-36px) scale(1.18) rotate(-2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.sub {
+  max-width: 40rem;
+  margin: 26px 0 30px;
+  font-size: clamp(1.02rem, 1.25vw, 1.25rem);
+  color: var(--color-ink-soft);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px 26px;
+}
+
+.cta {
+  gap: 10px;
+  box-shadow: 5px 5px 0 var(--color-accent-mint);
+}
+
+.cta:hover {
+  transform: translate(2px, 2px);
+  box-shadow: 3px 3px 0 var(--color-accent-mint);
+}
+
+.finder {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 2px;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.finder::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1px;
+  height: 8px;
+  z-index: -1;
+  background: var(--color-primary-tint);
+  transform-origin: left;
+  transform: scaleX(0.4);
+  transition: transform 0.3s var(--ease-out);
+}
+
+.finder:hover::after {
+  transform: scaleX(1);
+}
+
+.proof {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 22px;
+  margin: 34px 0 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  color: var(--color-muted);
+}
+
+.proof li::before {
+  content: "●";
+  margin-right: 8px;
+  font-size: 0.55rem;
+  vertical-align: 2px;
+  color: var(--color-primary);
+}
+
+/* ---------- collage ---------- */
+
+.collage {
+  position: relative;
+  width: 100%;
+  max-width: min(900px, 100%);
+  margin-inline: auto;
+  aspect-ratio: 600 / 640;
+  container-type: inline-size;
+}
+
+.halftone,
+.halftoneSmall {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(var(--color-primary) 38%, transparent 40%) 0 0 / 9px 9px;
+  pointer-events: none;
+}
+
+.halftone {
+  right: -9%;
+  top: -3%;
+  width: 52%;
+  aspect-ratio: 1;
+  opacity: 0.85;
+  animation: drift 14s ease-in-out infinite alternate;
+}
+
+.halftoneSmall {
+  left: 2%;
+  top: 14%;
+  width: 17%;
+  aspect-ratio: 1;
+  opacity: 0.4;
+  animation: drift 11s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes drift {
+  to {
+    transform: translate(14px, 18px);
+  }
+}
+
+.ribbon {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  overflow: visible;
+}
+
+.ribbonBase {
+  fill: none;
+  stroke: var(--color-primary);
+  stroke-width: 22;
+  stroke-linecap: round;
+  stroke-dasharray: 1400;
+  stroke-dashoffset: 1400;
+  animation: draw 1.6s var(--ease-glide) 0.5s forwards;
+}
+
+.ribbonDash {
+  fill: none;
+  stroke: var(--color-bg);
+  stroke-width: 3;
+  stroke-dasharray: 2 14;
+  stroke-linecap: round;
+  opacity: 0;
+  animation: fadeIn 0.4s ease 2s forwards, flow 1.2s linear 2s infinite;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -16;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.stations circle {
+  fill: var(--color-bg);
+  stroke: var(--color-ink);
+  stroke-width: 5;
+  transform-box: fill-box;
+  transform-origin: center;
+  opacity: 0;
+  animation: pop 0.5s var(--ease-spring) forwards;
+}
+
+.stations circle:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.stations circle:nth-child(2) {
+  animation-delay: 1.25s;
+}
+
+.stations circle:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.stations circle:nth-child(4) {
+  animation-delay: 1.75s;
+}
+
+@keyframes pop {
+  0% {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* cut-out learners: stand behind the platform bar and are outlined like die-cut stickers */
+.cut {
+  position: absolute;
+  z-index: 3;
+  animation: dropIn 0.9s var(--ease-spring) both;
+  filter: drop-shadow(3px 0 0 #fff) drop-shadow(-3px 0 0 #fff) drop-shadow(0 3px 0 #fff) drop-shadow(0 -3px 0 #fff)
+    drop-shadow(7px 9px 0 var(--color-ink));
+}
+
+.cut img {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.disc {
+  position: absolute;
+  left: 50%;
+  bottom: 18%;
+  width: 118%;
+  aspect-ratio: 1;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+
+.discBlue {
+  background: var(--tone-blue);
+}
+
+.discGreen {
+  background: var(--color-primary);
+}
+
+.discOrange {
+  background: var(--tone-orange);
+}
+
+.cutA {
+  left: -2%;
+  bottom: 13%;
+  width: 36%;
+  animation-delay: 0.7s;
+  transform: rotate(-3deg);
+}
+
+.cutB {
+  left: 30%;
+  bottom: 13%;
+  width: 41%;
+  z-index: 4;
+  animation-delay: 0.55s;
+}
+
+.cutC {
+  right: 0;
+  bottom: 13%;
+  width: 30%;
+  animation-delay: 0.85s;
+  transform: rotate(3deg);
+}
+
+@keyframes dropIn {
+  0% {
+    opacity: 0;
+    translate: 0 -70px;
+    rotate: -6deg;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+    rotate: 0deg;
+  }
+}
+
+/* The platform edge the learners stand behind: it hides the flat cut at the bottom of each portrait. */
+.platform {
+  position: absolute;
+  z-index: 5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 12%;
+  background: var(--color-ink);
+  border-top: 5px solid var(--color-accent-mint);
+  border-radius: 0 0 18px 18px;
+}
+
+.tape {
+  position: absolute;
+  z-index: 5;
+  width: 17%;
+  height: 5.4%;
+  background: color-mix(in srgb, var(--color-accent-mint) 80%, transparent);
+  box-shadow: 0 1px 2px rgb(17 24 39 / 0.25);
+}
+
+.tapeA {
+  left: 21%;
+  top: 28%;
+  transform: rotate(-34deg);
+}
+
+.tapeB {
+  right: 6%;
+  top: 41%;
+  transform: rotate(38deg);
+}
+
+.sticker {
+  position: absolute;
+  z-index: 6;
+  display: grid;
+  place-items: center;
+  width: 11%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 2.5px solid var(--color-ink);
+  box-shadow: 3px 3px 0 var(--color-ink);
+  color: var(--c-on, #fff);
+  background: var(--c, var(--line-build));
+  animation: float 6s ease-in-out infinite;
+}
+
+.stkCode {
+  --c: var(--line-build);
+  left: 22%;
+  top: 6%;
+}
+
+.stkCloud {
+  --c: var(--line-infra);
+  right: 33%;
+  top: 1%;
+  animation-delay: -2s;
+}
+
+.stkChart {
+  --c: var(--line-data);
+  left: 1%;
+  top: 41%;
+  animation-delay: -3.5s;
+}
+
+.stkShield {
+  --c: var(--line-product);
+  right: 3%;
+  top: 28%;
+  animation-delay: -1s;
+}
+
+@keyframes float {
+  50% {
+    transform: translateY(-9px) rotate(5deg);
+  }
+}
+
+.board {
+  position: absolute;
+  z-index: 6;
+  left: 0;
+  top: 0;
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  gap: 2px 9px;
+  padding: 9px 14px;
+  font-family: var(--font-mono);
+  font-size: clamp(0.72rem, 2.4cqw, 0.9rem);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--emerald-300);
+  background: var(--color-ink);
+  border-radius: 8px;
+  box-shadow: 3px 3px 0 var(--color-accent-mint);
+  transform: rotate(-3deg);
+  animation: fadeUp 0.6s var(--ease-out) 1.1s both;
+}
+
+.board b {
+  font-weight: 700;
+  color: #fff;
+}
+
+.boardDot {
+  grid-row: span 2;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-accent-mint);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px) rotate(-3deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-3deg);
+  }
+}
+
+.dest {
+  position: absolute;
+  z-index: 6;
+  right: 1%;
+  top: 6%;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin: 0;
+  padding: 6px 11px;
+  font-family: var(--font-mono);
+  font-size: clamp(0.72rem, 2.4cqw, 0.9rem);
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  background: var(--color-primary-deep);
+  border-radius: 6px;
+  animation: fadeIn 0.6s ease 2s both;
+}
+
+.torn {
+  position: absolute;
+  z-index: 8;
+  left: -3%;
+  bottom: 1%;
+  width: 62%;
+  padding: 5cqw 5.4cqw 6cqw;
+  color: #fff;
+  background: var(--color-ink);
+  transform: rotate(-3deg);
+  clip-path: polygon(0 7%, 6% 0, 14% 5%, 23% 1%, 33% 5%, 44% 0, 56% 4%, 67% 0, 78% 5%, 90% 1%, 100% 5%, 98% 38%, 100% 62%, 97% 100%, 84% 96%, 70% 100%, 56% 95%, 42% 100%, 28% 96%, 14% 100%, 3% 96%, 0 70%, 2% 40%);
+  animation: dropUp 0.8s var(--ease-spring) 0.95s both;
+}
+
+@keyframes dropUp {
+  0% {
+    opacity: 0;
+    translate: 0 50px;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.tornBig {
+  margin: 0;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: clamp(1.35rem, 7cqw, 2.4rem);
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--color-accent-mint);
+}
+
+.tornSub {
+  max-width: 21ch;
+  margin: 8px 0 0;
+  font-size: clamp(0.8rem, 2.6cqw, 1rem);
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.stamp {
+  position: absolute;
+  z-index: 8;
+  right: 0;
+  bottom: 0;
+  display: grid;
+  place-items: center;
+  width: 25%;
+  aspect-ratio: 1;
+  animation: popStamp 0.6s var(--ease-spring) 1.3s both;
+  transition: transform 0.3s var(--ease-spring);
+}
+
+.stamp:hover {
+  transform: scale(1.08) rotate(-6deg);
+}
+
+@keyframes popStamp {
+  0% {
+    opacity: 0;
+    transform: scale(0.3) rotate(-40deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) rotate(0);
+  }
+}
+
+.stampRing {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  animation: spin 22s linear infinite;
+}
+
+.stampRing text {
+  font-family: var(--font-mono);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  fill: var(--color-ink);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.stampCore {
+  display: grid;
+  place-items: center;
+  width: 52%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  color: var(--color-ink);
+  background: var(--color-accent-mint);
+  border: 2.5px solid var(--color-ink);
+  box-shadow: 3px 3px 0 var(--color-ink);
+  transition: transform 0.25s var(--ease-spring);
+}
+
+.stamp:hover .stampCore {
+  transform: rotate(45deg);
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: 1fr;
+    min-height: 0;
+    padding-bottom: 56px;
+  }
+
+  .collage {
+    max-width: 640px;
+    margin-top: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .dest {
+    top: 25%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ribbonBase {
+    stroke-dashoffset: 0;
+  }
+
+  .ribbonDash,
+  .stations circle,
+  .board,
+  .dest {
+    opacity: 1;
+  }
+}

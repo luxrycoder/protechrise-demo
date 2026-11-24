@@ -1,0 +1,5 @@
+{
+  "refundPolicyVersion": "2026-11",
+  "source": "waitlist-api lib/validators.js REFUND_POLICY_VERSION (the API stamps this on every acceptance; the form only sends refundPolicyAccepted: true)",
+  "note": "Update together with src/content/refund-policy.ts (scripts/sync-policy-content.ts) and the API this site deploys against. waitlist-api main moved to 2026-11 on 2026-11-08 (#197, Cohort 2 apply-and-pay); the dev API runs that code since 2026-11-08."
+}

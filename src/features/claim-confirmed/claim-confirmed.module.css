@@ -1,0 +1,28 @@
+.page { min-height: 70vh; display: flex; align-items: center; justify-content: center; padding: 64px var(--gutter); background: linear-gradient(180deg, var(--color-bg-wash) 0%, var(--color-bg) 45%); }
+.main { text-align: center; max-width: 560px; width: 100%; }
+.badge { display: inline-flex; align-items: center; gap: 8px; margin-bottom: 24px; border-radius: var(--radius-pill); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; padding: 8px 18px; font-weight: 600; }
+.badgePaid { background: var(--color-primary-tint); color: var(--color-primary-deep); }
+.badgePaid::before { content: "✓"; font-weight: 700; }
+.badgePending { background: #fef3c7; color: #92400e; }
+.title { font-weight: 700; letter-spacing: -0.02em; font-size: clamp(2rem, 5vw, 2.75rem); line-height: 1.1; margin: 0 0 14px; }
+.lead { color: var(--color-muted); font-size: 16px; line-height: 1.7; margin: 0 0 24px; }
+.studentId { display: inline-block; font-family: var(--font-mono, ui-monospace, monospace); font-size: 18px; font-weight: 700; letter-spacing: 0.06em; color: var(--color-primary-deep); background: var(--color-primary-tint); border-radius: 10px; padding: 10px 18px; margin: 0 0 24px; white-space: pre-wrap; overflow-wrap: anywhere; max-width: 100%; }
+.facts { list-style: none; margin: 0 0 28px; padding: 0; color: var(--color-muted); font-size: 14px; line-height: 1.9; }
+.steps { text-align: left; background: var(--color-bg); border: 1px solid var(--color-border); border-radius: var(--radius-card); padding: 22px 24px; margin: 0 0 32px; }
+.steps h2 { font-size: 1rem; margin: 0 0 12px; }
+.steps ol { margin: 0; padding-left: 20px; color: var(--color-muted); font-size: 14px; line-height: 1.8; }
+.steps a { color: var(--color-primary-deep); }
+.actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: 28px; }
+.btn { display: inline-block; text-decoration: none; font-weight: 600; font-size: 14px; padding: 12px 22px; border-radius: var(--radius-button); border: 1.5px solid var(--color-border); color: var(--color-ink); background: var(--color-bg); transition: background 0.2s, border-color 0.2s, color 0.2s; }
+.btn:hover { border-color: var(--color-primary); color: var(--color-primary-deep); }
+.btnPrimary { background: var(--color-primary); border-color: var(--color-primary); color: #fff; }
+.btnPrimary:hover { background: var(--color-primary-deep); border-color: var(--color-primary-deep); color: #fff; }
+.btn:focus-visible, .shareLink:focus-visible { outline: none; box-shadow: 0 0 0 3px var(--color-primary-tint), 0 0 0 1px var(--color-primary); }
+.share { border-top: 1px solid var(--color-border); padding-top: 24px; }
+.share p { font-size: 13px; margin: 0 0 14px; color: var(--color-muted); }
+.shareLinks { display: flex; gap: 10px; justify-content: center; flex-wrap: wrap; }
+.shareLink { display: inline-flex; align-items: center; text-decoration: none; color: var(--color-ink); border: 1.5px solid var(--color-border); border-radius: var(--radius-button); padding: 9px 14px; font-size: 13px; font-weight: 600; background: var(--color-bg); transition: border-color 0.2s, color 0.2s; }
+.shareLink:hover { border-color: var(--color-primary); color: var(--color-primary-deep); }
+.spinner { width: 34px; height: 34px; margin: 0 auto 20px; border-radius: 50%; border: 3px solid var(--color-primary-tint); border-top-color: var(--color-primary); animation: spin 0.8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } }

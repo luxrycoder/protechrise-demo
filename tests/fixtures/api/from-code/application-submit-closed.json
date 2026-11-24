@@ -1,0 +1,12 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. handleApplicationSubmit, app.js:1510 (no open cohort)",
+  "request": {
+    "method": "POST",
+    "path": "/api/applications"
+  },
+  "status": 503,
+  "body": {
+    "ok": false,
+    "error": "Applications are not open right now. Please check back soon."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/referrer/request-link",
+    "body": {
+      "email": "not-an-email"
+    }
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "message": "If that email is registered as a referrer, we've sent a sign-in link."
+  }
+}

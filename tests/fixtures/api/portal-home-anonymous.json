@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/portal/home"
+  },
+  "status": 404,
+  "body": {
+    "ok": false,
+    "error": "Not found"
+  }
+}

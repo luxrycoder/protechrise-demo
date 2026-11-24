@@ -1,0 +1,35 @@
+/*
+ * Fixed bottom-right, above page content and below the site header's dropdowns (z-index 10). The track page's
+ * sticky Apply bar sets data-sticky-apply on the page root while it is showing; the button then rides above it
+ * so the two never overlap (the bar's height lives in --sticky-apply-height, 72px as a fallback).
+ */
+.button {
+  position: fixed;
+  right: max(20px, env(safe-area-inset-right));
+  bottom: calc(20px + env(safe-area-inset-bottom));
+  z-index: 8;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.35);
+  transition: bottom 0.2s ease, transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.button:hover,
+.button:focus-visible {
+  transform: scale(1.06);
+  box-shadow: 0 10px 28px -6px rgba(0, 0, 0, 0.45);
+}
+
+.button:focus-visible {
+  outline: 3px solid var(--color-primary-deep);
+  outline-offset: 3px;
+}
+
+:global(:root[data-sticky-apply]) .button {
+  bottom: calc(var(--sticky-apply-height, 72px) + 16px + env(safe-area-inset-bottom));
+}

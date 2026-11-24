@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/applications/check-email?email=fixture.recorder@tasksystems.com"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "deliverable": true,
+    "alreadyRegistered": false
+  }
+}

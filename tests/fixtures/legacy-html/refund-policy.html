@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Refund Policy - ProTech Rise Academy</title>
+<meta name="description" content="The ProTech Rise Academy onboarding/certification fee is non-refundable once paid. The only exception is excess payment.">
+<link rel="canonical" href="https://protechrise.com/refund-policy">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ProTech Rise Academy">
+<meta property="og:url" content="https://protechrise.com/refund-policy">
+<meta property="og:title" content="Refund Policy - ProTech Rise Academy">
+<meta property="og:description" content="The ProTech Rise Academy onboarding/certification fee is non-refundable once paid. The only exception is excess payment.">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=clash-display@600,700&f[]=general-sans@400,500,600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --white: #FFFFFF; --off: #F0FDF4;
+    --green: #059669; --green-dark: #047857; --green-hover: #065F46;
+    --ink: #111827; --muted: #6B7280; --border: #E5E7EB;
+    --disp: 'Clash Display', system-ui, sans-serif;
+    --body: 'General Sans', system-ui, sans-serif;
+    --mono: 'JetBrains Mono', monospace;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: var(--body); background: var(--white); color: var(--ink); -webkit-font-smoothing: antialiased; }
+  .nav-actions { display:flex; align-items:center; gap:12px; }
+  .nav-lms { color:var(--green-dark); font-weight:600; font-size:14px; text-decoration:none; border:1.5px solid var(--green); border-radius:8px; padding:9px 16px; }
+  .nav-lms:hover { background:var(--off); }
+  nav {
+    position: sticky; top: 0; z-index: 100; background: rgba(255,255,255,.96);
+    backdrop-filter: blur(12px); border-bottom: 1px solid var(--border);
+    padding: 0 clamp(20px,4vw,64px); height: 68px;
+    display: flex; align-items: center; justify-content: space-between; gap: 24px;
+  }
+  .nav-logo { font-family: var(--disp); font-weight: 700; font-size: 1rem; color: var(--ink); letter-spacing: -.01em; text-decoration: none; }
+  .nav-logo em { color: var(--green-dark); font-style: normal; }
+  .nav-cta {
+    background: var(--green-dark); color: var(--white); font-size: 14px; font-weight: 600;
+    padding: 10px 22px; border-radius: 8px; text-decoration: none; transition: background .2s;
+  }
+  .nav-cta:hover { background: var(--green-hover); }
+  main { max-width: 720px; margin: 0 auto; padding: clamp(48px,8vw,88px) clamp(20px,4vw,64px); }
+  .eyebrow { font-family: var(--mono); font-size: 12px; letter-spacing: .2em; text-transform: uppercase; color: var(--green-dark); margin-bottom: 14px; display: block; }
+  h1 { font-family: var(--disp); font-weight: 700; font-size: clamp(2rem,4.5vw,2.75rem); letter-spacing: -.02em; margin-bottom: 8px; }
+  .updated { color: var(--muted); font-size: 13px; margin-bottom: 44px; }
+  h2 { font-family: var(--disp); font-weight: 600; font-size: 1.25rem; margin: 40px 0 12px; }
+  p, li { color: var(--muted); font-size: 15px; line-height: 1.75; }
+  p { margin-bottom: 14px; }
+  ul, ol { margin: 0 0 14px 20px; }
+  li { margin-bottom: 6px; }
+  a { color: var(--green-dark); }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 14px; }
+  th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border); color: var(--muted); }
+  th { color: var(--ink); font-weight: 600; }
+  footer { border-top: 1px solid var(--border); padding: 32px clamp(20px,4vw,64px); text-align: center; margin-top: 40px; }
+  footer a { color: var(--muted); text-decoration: none; font-size: 13px; margin: 0 10px; }
+  footer a:hover { color: var(--green-dark); }
+  /* shared a11y baseline: long words in headings wrap instead of causing sideways scroll */
+  h1, h2, h3 { overflow-wrap: anywhere; }
+  .btn, .btn-primary, .btn-secondary, .btn-green, .share-link, .claim-btn, main button:not(.pull-dot) { min-height: 44px; }
+  .nav-cta { padding-top: 13px; padding-bottom: 13px; }
+  /* shared a11y baseline: standalone nav and footer links are at least 44px tall (inline links in paragraphs are left alone) */
+  nav a:not(.nav-logo), footer a { min-height: 44px; display: inline-flex; align-items: center; }
+  nav .nav-logo { display: inline-block; padding: 13px 0; }
+  footer a { padding: 0 8px; margin: 0 2px; }
+  /* shared a11y baseline: honour the visitor's reduced-motion setting */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  }
+</style>
+</head>
+<body>
+<nav>
+  <a href="/" class="nav-logo">ProTech Rise <em>Academy</em></a>
+  <div class="nav-actions">
+    <a href="{{LMS_URL}}" target="_blank" rel="noopener noreferrer" class="nav-lms">LMS</a>
+    <a href="/application" class="nav-cta">Apply Now</a>
+  </div>
+</nav>
+<main>
+  <span class="eyebrow">Refund Policy</span>
+  <h1>The {{ONBOARDING_FEE}} certificate fee is non-refundable</h1>
+  <p class="updated">Version 2026-11 &middot; Last updated November 7, 2026</p>
+
+  <p>The ProTech Rise Cohort 2 Tech Bootcamp has a tuition fee of {{TUITION_FEE}}. With our {{SCHOLARSHIP_PERCENT}}% scholarship you pay {{ONBOARDING_FEE}} instead, as a one-time certificate fee. This page explains, in plain terms, what that fee is for and the one case where we refund money.</p>
+
+  <h2>What the {{ONBOARDING_FEE}} covers</h2>
+  <p>The fee secures your spot in Cohort 2 and covers your certificate, which is issued when you successfully complete the bootcamp. It also pays for setting you up: access to the learning platform, your track and pod allocation, and your place in the community. You pay now; the certificate is issued at the end. Once you pay, we reserve that spot for you and turn away other applicants.</p>
+
+  <h2>No refunds once paid</h2>
+  <p>The {{ONBOARDING_FEE}} certificate fee is non-refundable once paid. This applies if you:</p>
+  <ul>
+    <li>withdraw or change your mind after paying;</li>
+    <li>are unable to attend, or miss the start of the cohort;</li>
+    <li>stop attending or do not complete the programme, in which case no certificate is issued and the fee is not returned.</li>
+  </ul>
+
+  <h2>The one exception: excess payment</h2>
+  <p>If you pay more than the amount due (for example, you are charged twice for the same spot), we refund the excess. We do not refund the amount that was due.</p>
+
+  <h2>Agreeing to this policy</h2>
+  <p>You are asked to accept this policy before you pay. We record when you accepted it and which version you accepted.</p>
+
+  <h2>Questions</h2>
+  <p>Email <a href="mailto:hello@protechrise.com">hello@protechrise.com</a> and a person will reply. See also our <a href="/faq">FAQ</a> and <a href="/privacy">Privacy Policy</a>.</p>
+</main>
+
+<footer>
+  <a href="/">Home</a>
+  <a href="/application">Apply</a>
+  <a href="/status">Check Status</a>
+  <a href="/faq">FAQ</a>
+  <a href="/privacy">Privacy</a>
+  <a href="/become-a-referrer">Become a Referrer</a>
+  <a href="mailto:hello@protechrise.com">Contact</a>
+</footer>
+<script src="/consent.js?v=a11y2611"></script>
+</body>
+</html>

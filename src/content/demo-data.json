@@ -1,0 +1,205 @@
+{
+  "_note": "Pre-stored demo payloads in the same shape as the waitlist API. Numbers are made up. Used only when DEMO_DATA=1.",
+  "tracks": {
+    "ok": true,
+    "cohort": "cohort-2",
+    "payAtApply": false,
+    "tracks": [
+      {
+        "slug": "frontend",
+        "name": "Frontend Development",
+        "category": "Software",
+        "color": "059669",
+        "blurb": "Build websites people use, from HTML and CSS to React.",
+        "instructor": "Ada O.",
+        "sortOrder": 1,
+        "difficulty": "beginner",
+        "enrolleeCount": 412
+      },
+      {
+        "slug": "backend",
+        "name": "Backend Development",
+        "category": "Software",
+        "color": "059669",
+        "blurb": "Servers, databases and APIs that power real apps.",
+        "instructor": "Tunde B.",
+        "sortOrder": 2,
+        "difficulty": "beginner",
+        "enrolleeCount": 388
+      },
+      {
+        "slug": "mobile",
+        "name": "Mobile App Development",
+        "category": "Software",
+        "color": "059669",
+        "blurb": "Ship an Android and iPhone app from one Flutter codebase.",
+        "instructor": "Emeka N.",
+        "sortOrder": 3,
+        "difficulty": "beginner",
+        "enrolleeCount": 301
+      },
+      {
+        "slug": "cloud",
+        "name": "Cloud Computing",
+        "category": "Cloud & Security",
+        "color": "2563EB",
+        "blurb": "Azure first, with AWS and Google Cloud beside it.",
+        "instructor": "Ngozi E.",
+        "sortOrder": 4,
+        "difficulty": "beginner",
+        "enrolleeCount": 276
+      },
+      {
+        "slug": "cyber",
+        "name": "Cybersecurity",
+        "category": "Cloud & Security",
+        "color": "2563EB",
+        "blurb": "How systems are attacked and defended, in a safe lab.",
+        "instructor": "Amara D.",
+        "sortOrder": 5,
+        "difficulty": "beginner",
+        "enrolleeCount": 198
+      },
+      {
+        "slug": "data",
+        "name": "Data Analytics",
+        "category": "Data & AI",
+        "color": "7C3AED",
+        "blurb": "Excel, SQL, Python and Power BI, from raw data to answers.",
+        "instructor": "Zainab M.",
+        "sortOrder": 6,
+        "difficulty": "beginner",
+        "enrolleeCount": 354
+      },
+      {
+        "slug": "ai-prompt",
+        "name": "AI Prompt Engineering",
+        "category": "Data & AI",
+        "color": "7C3AED",
+        "blurb": "Get dependable results from AI tools, and know when not to trust them.",
+        "instructor": "Kelechi A.",
+        "sortOrder": 7,
+        "difficulty": "beginner",
+        "enrolleeCount": 242
+      },
+      {
+        "slug": "ai-auto",
+        "name": "AI Automation",
+        "category": "Data & AI",
+        "color": "7C3AED",
+        "blurb": "Build small AI helpers that do tasks for you.",
+        "instructor": "Folake S.",
+        "sortOrder": 8,
+        "difficulty": "beginner",
+        "enrolleeCount": 187
+      },
+      {
+        "slug": "product",
+        "name": "Product Management",
+        "category": "Product & Design",
+        "color": "F97316",
+        "blurb": "How teams decide what to build, with real case studies.",
+        "instructor": "Ifeanyi C.",
+        "sortOrder": 9,
+        "difficulty": "beginner",
+        "enrolleeCount": 165
+      },
+      {
+        "slug": "design",
+        "name": "UI/UX Design",
+        "category": "Product & Design",
+        "color": "F97316",
+        "blurb": "From first sketch to a tested prototype in Figma.",
+        "instructor": "Yusuf K.",
+        "sortOrder": 10,
+        "difficulty": "beginner",
+        "enrolleeCount": 220
+      },
+      {
+        "slug": "project",
+        "name": "Project Management",
+        "category": "Product & Design",
+        "color": "F97316",
+        "blurb": "Planning, scheduling and teamwork with practical templates.",
+        "instructor": "Halima Y.",
+        "sortOrder": 11,
+        "difficulty": "beginner",
+        "enrolleeCount": 96
+      },
+      {
+        "slug": "marketing",
+        "name": "Digital Marketing",
+        "category": "Business",
+        "color": "D97706",
+        "blurb": "Reach and keep customers online, with live campaign practice.",
+        "instructor": "Obinna L.",
+        "sortOrder": 12,
+        "difficulty": "beginner",
+        "enrolleeCount": 143
+      },
+      {
+        "slug": "virtual",
+        "name": "Virtual Assistance",
+        "category": "Business",
+        "color": "D97706",
+        "blurb": "The day-to-day skills of supporting a business from anywhere.",
+        "instructor": "Bisi T.",
+        "sortOrder": 13,
+        "difficulty": "beginner",
+        "enrolleeCount": 88
+      }
+    ]
+  },
+  "terms": {
+    "ok": true,
+    "fee": "₦30,000",
+    "tuition": "₦300,000",
+    "scholarshipPercent": 90
+  },
+  "countries": {
+    "ok": true,
+    "totalCountries": 14,
+    "countries": [
+      {
+        "name": "Nigeria",
+        "count": 1840
+      },
+      {
+        "name": "Ghana",
+        "count": 212
+      },
+      {
+        "name": "Kenya",
+        "count": 164
+      },
+      {
+        "name": "South Africa",
+        "count": 97
+      },
+      {
+        "name": "Cameroon",
+        "count": 71
+      },
+      {
+        "name": "Uganda",
+        "count": 58
+      },
+      {
+        "name": "Rwanda",
+        "count": 41
+      },
+      {
+        "name": "Zambia",
+        "count": 33
+      },
+      {
+        "name": "Tanzania",
+        "count": 29
+      },
+      {
+        "name": "Ethiopia",
+        "count": 22
+      }
+    ]
+  }
+}

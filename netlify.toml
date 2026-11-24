@@ -1,0 +1,10 @@
+# Demo deployment only: shows the redesigned landing page from pre-stored JSON (no backend) with the illustration switcher.
+[build]
+  command = "npm run build"
+
+[build.environment]
+  NODE_VERSION = "22"
+  DEMO_DATA = "1"
+  # Nothing is called in demo mode, but the app requires a value. Keeps the demo noindex by default.
+  API_ORIGIN = "https://demo.invalid"
+  DEV_NOINDEX = "true"

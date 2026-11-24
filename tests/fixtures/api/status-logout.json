@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/status/logout",
+    "body": {}
+  },
+  "status": 200,
+  "body": {
+    "ok": true
+  }
+}

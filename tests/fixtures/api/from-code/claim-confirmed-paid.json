@@ -1,0 +1,23 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. handleClaimConfirmed, app.js:7696",
+  "request": {
+    "method": "GET",
+    "path": "/api/claim/confirmed?ref=REF"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "found": true,
+    "paid": true,
+    "firstName": "Ada",
+    "studentId": "PRA-0041",
+    "amountMinor": 1950000,
+    "currency": "NGN",
+    "amountCategory": "discounted",
+    "cohortStartDate": "2026-11-02",
+    "claimUrl": null,
+    "claimDeadline": null,
+    "fixedPayment": false,
+    "communityConfigured": true
+  }
+}

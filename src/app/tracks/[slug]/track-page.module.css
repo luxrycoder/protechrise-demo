@@ -1,0 +1,142 @@
+.hero {
+  --accent: var(--color-primary);
+  padding-block: clamp(56px, 10vw, 128px);
+  border-top: 6px solid var(--accent);
+  background: linear-gradient(180deg, color-mix(in srgb, var(--accent) 10%, #fff) 0, #fff 100%);
+}
+
+.category {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin: 0 0 16px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-ink-soft);
+}
+
+.category::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.heroGrid {
+  display: grid;
+  gap: 40px;
+  align-items: center;
+}
+
+.heroText {
+  min-width: 0;
+}
+
+/* Decorative, track-coloured artwork. CSS only (no image request), fixed aspect ratio so nothing shifts as it loads. */
+.art {
+  display: none;
+  aspect-ratio: 1;
+  width: 100%;
+  max-width: 380px;
+  justify-self: end;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, color-mix(in srgb, var(--accent) 85%, #fff) 0, var(--accent) 55%, color-mix(in srgb, var(--accent) 70%, #000) 100%);
+  box-shadow:
+    0 0 0 28px color-mix(in srgb, var(--accent) 14%, transparent),
+    0 0 0 64px color-mix(in srgb, var(--accent) 7%, transparent);
+}
+
+@media (min-width: 900px) {
+  .heroGrid {
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 380px);
+    gap: 72px;
+  }
+
+  .art {
+    display: block;
+  }
+}
+
+.title {
+  max-width: 18ch;
+  font-size: clamp(2.75rem, 7vw, 5.5rem);
+  line-height: 1.02;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.lede {
+  max-width: 60ch;
+  margin: 20px 0 0;
+  font-size: 1.15rem;
+  color: var(--color-ink-soft);
+}
+
+.stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.stats li {
+  padding: 4px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-pill);
+  background: var(--color-bg);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--color-ink-soft);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.actions :global(.btn-primary) {
+  padding: 14px 28px;
+  font-size: 1.05rem;
+}
+
+.note {
+  margin: 28px 0 0;
+  color: var(--color-muted);
+}
+
+.related {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.related a {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  height: 100%;
+  padding: 20px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  transition: border-color 0.15s ease;
+}
+
+.related a:hover {
+  border-color: var(--color-primary);
+}
+
+.related span {
+  font-size: 0.92rem;
+  color: var(--color-muted);
+}

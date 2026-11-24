@@ -1,0 +1,57 @@
+/* "How it works" on an evening band: a route drawn by scroll, four lit stations. */
+.road { position: relative; width: 100%; max-width: 1400px; margin-inline: auto; }
+.svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.bed, .run { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.bed { stroke: #1f2937; stroke-width: 18; }
+.run { stroke: var(--color-accent-mint); stroke-width: 18; }
+.walker { position: absolute; z-index: 4; width: 0; height: 0; }
+.walker > span { position: absolute; left: 0; top: 0; transform: translate(-50%, -88%); }
+.row { position: absolute; left: 0; right: 0; height: 0; z-index: 2; }
+.row > * { position: absolute; top: 0; }
+.node { left: 26%; transform: translate(-50%, -50%); display: grid; place-items: center; width: 60px; height: 60px; border-radius: 50%; background: var(--night); border: 5px solid #4b5563; font-family: var(--font-mono); font-weight: 800; color: #9ca3af; transition: background-color .4s, border-color .4s, color .4s, box-shadow .4s; }
+.lit .node { background: var(--color-accent-mint); border-color: #fff; color: var(--color-ink); box-shadow: 0 0 0 10px rgb(52 211 153 / .22); }
+.text { left: 33%; width: 36%; transform: translateY(-50%); color: #e5e7eb; opacity: .35; translate: 0 14px; transition: opacity .6s, translate .6s var(--ease-out); }
+.lit .text { opacity: 1; translate: 0 0; }
+.art { right: 1%; width: 24%; transform: translateY(-50%); display: grid; place-items: center; min-height: 190px; }
+.flip .node { left: 74%; }
+.flip .text { left: auto; right: 33%; text-align: right; }
+.flip .art { right: auto; left: 1%; }
+.text h3 { margin: 6px 0; font-size: clamp(1.6rem, 2.6vw, 2.6rem); font-weight: 800; letter-spacing: -.03em; color: #fff; }
+.text p { margin: 0; font-size: clamp(1rem, 1.25vw, 1.2rem); }
+.text a { color: var(--color-accent-mint); border-bottom: 2px solid currentColor; }
+.num { color: var(--emerald-300); }
+.peep { position: absolute; right: -6px; bottom: -40px; animation: bob 5s ease-in-out infinite; }
+.flip .peep { right: auto; left: -6px; }
+@keyframes bob { 50% { transform: translateY(-6px) rotate(2deg); } }
+.vTicket, .vScreen, .vBrowser, .vOffer { position: relative; width: min(100%, 320px); font-size: 1.1rem; padding: 16px; border-radius: 14px; background: #fff; color: var(--color-ink); border: 3px solid var(--color-ink); box-shadow: 6px 6px 0 var(--color-accent-mint); transform: rotate(-2deg); }
+.vTicket strong { display: block; font-size: 1.2rem; margin: 6px 0 10px; }
+.vIcon { position: absolute; right: 8px; top: 8px; color: var(--color-primary); opacity: .35; }
+.vStamp, .vSeal { display: inline-flex; gap: 6px; align-items: center; padding: 4px 10px; border-radius: 6px; background: var(--color-primary-tint); color: var(--color-primary-pressed); font-weight: 700; font-size: .82rem; }
+.vBar { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: .8rem; font-weight: 700; }
+.vLive { display: inline-flex; gap: 5px; align-items: center; color: #b91c1c; }
+.vLive i { width: 8px; height: 8px; border-radius: 50%; background: #b91c1c; animation: blink 1.2s infinite; }
+@keyframes blink { 50% { opacity: .2; } }
+.vTiles { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin: 10px 0; }
+.vTiles i { height: 34px; border-radius: 6px; background: var(--color-primary-tint); }
+.vTiles i:nth-child(2) { background: var(--tone-blue); } .vTiles i:nth-child(3) { background: var(--tone-sand); } .vTiles i:nth-child(4) { background: var(--tone-purple); }
+.vScreen p, .vBrowser p { margin: 0; font-size: .95rem; color: var(--color-muted); }
+.vBrowserTop { display: flex; gap: 5px; align-items: center; font-size: .72rem; margin-bottom: 10px; }
+.vBrowserTop i { width: 8px; height: 8px; border-radius: 50%; background: var(--color-border); }
+.vBrowserTop span { margin-left: auto; font-family: var(--font-mono); }
+.vWork { display: grid; grid-template-columns: 2fr 1fr; gap: 6px; margin-bottom: 10px; }
+.vWork span { height: 38px; border-radius: 6px; }
+.w1 { background: var(--line-build-bright); } .w2 { background: var(--tone-orange); } .w3 { background: var(--line-data-bright); } .w4 { background: var(--line-infra-bright); }
+.vOffer { text-align: center; display: grid; justify-items: center; gap: 6px; }
+.vOffer svg { color: var(--color-primary); }
+@media (max-width: 1100px) {
+  .road { aspect-ratio: auto !important; display: grid; gap: 36px; padding-left: 44px; }
+  .svg, .walker { display: none; }
+  .road::before { content: ""; position: absolute; left: 15px; top: 0; bottom: 0; width: 8px; border-radius: 8px; background: var(--color-accent-mint); }
+  .row { position: relative; top: auto !important; height: auto; }
+  .row > * { position: relative; left: auto !important; right: auto !important; width: auto; transform: none; translate: none; }
+  .node { position: absolute; left: -44px !important; top: 0; width: 38px; height: 38px; font-size: .7rem; transform: none; }
+  .text, .flip .text { text-align: left; opacity: 1; }
+  .art { padding: 18px 0 40px; justify-items: start; min-height: 0; width: fit-content !important; }
+  .peep, .flip .peep { right: -50px; left: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .peep, .vLive i { animation: none; } }

@@ -1,0 +1,41 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. handleReferrerMe, app.js:8254",
+  "request": {
+    "method": "GET",
+    "path": "/api/referrer/me"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "name": "Ngozi B.",
+    "code": "ngozi-b",
+    "link": "https://example.test/r/ngozi-b",
+    "tokenAmount": 500000,
+    "stats": {
+      "applied": 4,
+      "waitlisted": 1,
+      "paid": 2,
+      "earned": 1000000,
+      "paidOut": 500000,
+      "outstanding": 500000
+    },
+    "applicants": [
+      {
+        "name": "Ada O.",
+        "country": "Nigeria",
+        "appliedAt": "2026-10-02T10:00:00Z",
+        "paid": true,
+        "payoutState": "paid_out",
+        "paidOutAt": "2026-10-20T10:00:00Z"
+      },
+      {
+        "name": "Tunde S.",
+        "country": null,
+        "appliedAt": "2026-10-03T11:00:00Z",
+        "paid": false,
+        "payoutState": null,
+        "paidOutAt": null
+      }
+    ]
+  }
+}

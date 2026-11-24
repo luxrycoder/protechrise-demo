@@ -1,0 +1,36 @@
+/* Stories as boarding-pass stubs on a slow ticker, with a punched notch and a dashed tear line. */
+.segments { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+.segment { display: inline-flex; align-items: center; gap: 8px; padding: 8px 14px; border: 2px solid var(--color-ink); border-radius: var(--radius-pill); background: #fff; font: inherit; font-weight: 700; font-size: .88rem; cursor: pointer; transition: background-color .15s, color .15s; }
+.segment:hover { background: var(--color-primary-tint); }
+.segment[aria-pressed="true"] { background: var(--color-ink); color: #fff; }
+.segmentCount { font-family: var(--font-mono); font-size: .75rem; opacity: .75; }
+.marquee { position: relative; overflow: hidden; padding: 10px 0 18px; }
+.marqueeTrack { display: flex; }
+.marquee[data-animated="true"] { mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); -webkit-mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent); }
+.marquee[data-animated="true"] .marqueeTrack { width: max-content; animation: tick 60s linear infinite; }
+.marquee:hover .marqueeTrack, .marquee:focus-within .marqueeTrack { animation-play-state: paused; }
+.marqueeSet { display: flex; flex-wrap: wrap; gap: 22px; margin: 0; padding: 0; list-style: none; }
+.marquee[data-animated="true"] .marqueeSet { flex-wrap: nowrap; padding-right: 22px; }
+.marqueeSet > .testimonial { flex: 0 0 min(350px, 82vw); }
+@keyframes tick { to { transform: translateX(-50%); } }
+.testimonial { position: relative; display: flex; }
+.testimonial figure { margin: 0; display: flex; flex-direction: column; gap: 14px; width: 100%; padding: 24px 22px 18px; background: #fff; border: 2.5px solid var(--color-ink); border-radius: 16px; box-shadow: 6px 6px 0 var(--color-ink); }
+.testimonial:nth-child(3n+2) figure { box-shadow: 6px 6px 0 var(--color-primary); }
+.testimonial:nth-child(3n) figure { box-shadow: 6px 6px 0 var(--line-product-bright); }
+.quote { margin: 0; font-family: var(--font-display), system-ui, sans-serif; font-size: 1.12rem; font-weight: 600; line-height: 1.35; letter-spacing: -.015em; }
+.quote p { margin: 0; }
+.who { display: flex; align-items: center; gap: 12px; padding-top: 14px; border-top: 2px dashed var(--color-border); }
+.avatar { display: grid; place-items: center; flex: none; width: 42px; height: 42px; border-radius: 50%; background: var(--color-primary-deep); color: #fff; font-family: var(--font-mono); font-size: .8rem; font-weight: 800; }
+.whoName { display: block; font-weight: 800; }
+.whoRole { display: block; font-size: .95rem; color: var(--color-muted); }
+.tags { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.tags li { padding: 3px 9px; border-radius: 6px; background: var(--color-bg-wash); color: var(--color-primary-pressed); font-family: var(--font-mono); font-size: .78rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; }
+.postSource { margin: 0; font-size: .95rem; }
+.testimonialSource { display: inline-flex; align-items: center; gap: 7px; font-weight: 700; color: var(--primary-ink); border-bottom: 2px solid var(--color-accent-mint); }
+.testimonialSource:hover { background: var(--color-primary-tint); }
+.testimonialSourceLabel { text-decoration: none; }
+.storyLabel { color: var(--color-muted); font-weight: 600; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee[data-animated="true"] { overflow-x: auto; mask-image: none; -webkit-mask-image: none; }
+  .marquee[data-animated="true"] .marqueeSet[aria-hidden="true"], .marquee[data-animated="true"] .testimonial[data-filler="true"] { display: none; }
+}

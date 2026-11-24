@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/applications/check-email?email=not-an-email"
+  },
+  "status": 400,
+  "body": {
+    "ok": false,
+    "error": "Enter a valid email address."
+  }
+}

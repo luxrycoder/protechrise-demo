@@ -1,0 +1,11 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/claim/confirmed?ref=bogus-reference"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "found": false
+  }
+}

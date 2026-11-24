@@ -1,0 +1,22 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. handleStatusMe, app.js:8032 (application younger than the review window)",
+  "request": {
+    "method": "GET",
+    "path": "/api/status/me"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "eligible": false,
+    "fullName": "Ada Obi",
+    "availableAfter": "2026-10-03T09:00:00Z",
+    "currentApplicationId": 41,
+    "applications": [
+      {
+        "id": 41,
+        "cohortName": "Cohort 1",
+        "preferredTrack": "Frontend Development"
+      }
+    ]
+  }
+}

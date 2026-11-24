@@ -1,0 +1,59 @@
+.list {
+  display: grid;
+  gap: 16px;
+  margin: 24px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tutor {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg);
+}
+
+.avatar {
+  flex: none;
+  display: grid;
+  place-items: center;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--color-primary) 14%, #fff);
+  color: var(--color-primary-deep);
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.name {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.role {
+  margin: 2px 0 0;
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.bio {
+  margin: 10px 0 0;
+  color: var(--color-ink-soft);
+}
+
+/* On a phone the avatar sits above the text, so the bio keeps the full card width. */
+@media (max-width: 480px) {
+  .tutor {
+    flex-direction: column;
+    gap: 14px;
+    padding: 20px;
+  }
+}

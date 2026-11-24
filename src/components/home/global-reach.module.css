@@ -1,0 +1,17 @@
+/* Countries as a departures board: dark panel, mono rows, a bar per country scaled to its applicants. */
+.section { background: #fff; }
+.board { max-width: 880px; padding: 22px clamp(16px, 3vw, 32px) 26px; background: var(--color-ink); color: #fff; border-radius: var(--radius-panel); box-shadow: 8px 8px 0 var(--color-accent-mint); }
+.head { display: flex; justify-content: space-between; gap: 12px; padding-bottom: 14px; border-bottom: 1px dashed rgb(255 255 255 / .3); font-family: var(--font-mono); font-size: .82rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; color: var(--emerald-300); }
+.rows { margin: 0; padding: 0; list-style: none; }
+.row { display: grid; grid-template-columns: 2rem minmax(7rem, 11rem) 1fr 4.5rem; align-items: center; gap: 12px; padding: 11px 0; border-bottom: 1px solid #1f2937; font-family: var(--font-mono); font-size: 1rem; font-weight: 700; animation: flip .6s var(--ease-out) both; animation-delay: calc(var(--i) * 70ms); }
+@keyframes flip { from { opacity: 0; transform: translateY(-8px) rotateX(70deg); } }
+.flag { font-size: 1.3rem; }
+.name { text-transform: uppercase; letter-spacing: .06em; }
+.track { height: 8px; border-radius: 8px; background: #1f2937; overflow: hidden; }
+.fill { display: block; height: 100%; border-radius: 8px; background: var(--color-accent-mint); transform-origin: left; animation: grow 1s var(--ease-glide) both; animation-delay: calc(var(--i) * 70ms + 200ms); }
+@keyframes grow { from { transform: scaleX(0); } }
+.count { text-align: right; color: var(--emerald-300); font-variant-numeric: tabular-nums; }
+.total { margin: 18px 0 0; font-size: 1rem; }
+.total strong { font-family: var(--font-display), system-ui, sans-serif; font-size: 1.6rem; }
+@media (max-width: 560px) { .row { grid-template-columns: 1.6rem 1fr 3.5rem; } .track { display: none; } }
+@media (prefers-reduced-motion: reduce) { .row, .fill { animation: none; } }

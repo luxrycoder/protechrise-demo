@@ -1,0 +1,13 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/status/track-change",
+    "body": {
+      "requestedTrack": "x"
+    }
+  },
+  "status": 401,
+  "body": {
+    "ok": false
+  }
+}

@@ -1,0 +1,8 @@
+.crowd { position: relative; overflow: hidden; padding-top: 8px; }
+.crowd ul { display: flex; justify-content: space-between; align-items: flex-end; gap: 0; margin: 0 0 -38px; padding: 0; list-style: none; position: relative; z-index: 1; }
+.crowd li { flex: 1 1 0; display: flex; justify-content: center; min-width: 0; animation: sway 4.5s ease-in-out infinite; animation-delay: calc(var(--i) * -.7s); transform-origin: 50% 100%; }
+.crowd li > span { }
+@keyframes sway { 50% { transform: rotate(2.5deg) translateY(-4px); } }
+.platform { position: relative; z-index: 2; height: 54px; background: var(--color-ink); border-top: 8px solid var(--color-accent-mint); border-radius: 0 0 14px 14px; background-image: repeating-linear-gradient(90deg, transparent 0 38px, #1f2937 38px 40px); }
+@media (max-width: 760px) { .crowd li:nth-child(n+5) { display: none; } .crowd li > span { transform: scale(.8); transform-origin: bottom; } }
+@media (prefers-reduced-motion: reduce) { .crowd li { animation: none; } }

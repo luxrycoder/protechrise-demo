@@ -1,0 +1,12 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. claimPolicy.acceptPolicies, lib/claim-policy.js:64",
+  "request": {
+    "method": "POST",
+    "path": "/api/claim/accept"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "payUrl": "/claim?token=TOKEN"
+  }
+}

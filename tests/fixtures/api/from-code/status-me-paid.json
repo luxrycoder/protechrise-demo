@@ -1,0 +1,59 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. handleStatusMe, app.js:8032 (paid learner)",
+  "request": {
+    "method": "GET",
+    "path": "/api/status/me"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "currentApplicationId": 41,
+    "applications": [
+      {
+        "id": 41,
+        "cohortName": "Cohort 1",
+        "preferredTrack": "Frontend Development"
+      },
+      {
+        "id": 12,
+        "cohortName": null,
+        "preferredTrack": "Data Analytics"
+      }
+    ],
+    "fullName": "Ada Obi",
+    "preferredTrack": "Frontend Development",
+    "timezone": "Africa/Lagos",
+    "currentStatus": "payment_pending",
+    "statusHistory": [
+      {
+        "status": "submitted",
+        "created_at": "2026-10-01T09:00:00Z"
+      },
+      {
+        "status": "accepted",
+        "created_at": "2026-10-05T14:30:00Z"
+      }
+    ],
+    "pod": {
+      "name": "Pod A",
+      "state": "ready",
+      "url": "/community/pod"
+    },
+    "trackChangeEligible": false,
+    "trackChangeLmsNote": null,
+    "trackChangeReissuesStudentId": true,
+    "paymentConfirmed": true,
+    "studentId": "PRA-0041",
+    "communityUrl": "/community",
+    "trackChangeClosedReason": "The course change window has closed.",
+    "trackChangeRequest": {
+      "requestedTrack": "Backend Development",
+      "status": "approved",
+      "decisionNote": null
+    },
+    "carriedFrom": {
+      "cohortName": "Cohort 1",
+      "applicationId": 12
+    }
+  }
+}

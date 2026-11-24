@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/waitlist",
+    "body": {}
+  },
+  "status": 400,
+  "body": {
+    "ok": false,
+    "error": "A valid email is required."
+  }
+}

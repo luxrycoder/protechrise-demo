@@ -1,0 +1,40 @@
+{
+  "name": "protechrise-web",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "dev": "next dev -p 3100",
+    "build": "next build",
+    "start": "next start -p 3100",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "test:live": "vitest run tests/api/live.test.ts",
+    "fixtures:record": "node scripts/record-api-fixtures.mjs"
+  },
+  "dependencies": {
+    "@phosphor-icons/react": "^2.1.10",
+    "framer-motion": "^14.10.1",
+    "next": "16.4.5",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@dicebear/core": "^9.4.3",
+    "@dicebear/lorelei": "^9.4.2",
+    "@eslint/eslintrc": "^3.3.1",
+    "@types/node": "22.15.3",
+    "@types/react": "19.1.2",
+    "@types/react-dom": "19.1.2",
+    "@vitest/coverage-v8": "5.1.0",
+    "eslint": "9.27.0",
+    "eslint-config-next": "16.4.5",
+    "typescript": "5.8.3",
+    "vitest": "5.1.0"
+  }
+}

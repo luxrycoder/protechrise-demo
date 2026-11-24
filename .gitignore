@@ -1,0 +1,15 @@
+node_modules/
+.next/
+out/
+coverage/
+*.log
+.DS_Store
+next-env.d.ts
+*.tsbuildinfo
+
+# Secrets: never commit
+.env
+.env*.local
+
+# Local reference mirrors of third-party sites (study only, never committed or built)
+reference/

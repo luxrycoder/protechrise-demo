@@ -1,0 +1,10 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/status/me"
+  },
+  "status": 401,
+  "body": {
+    "ok": false
+  }
+}

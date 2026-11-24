@@ -1,0 +1,102 @@
+/* Each module reuses the bordered-card look of the track page's fact cards rather than adding a new visual style. */
+.list {
+  display: grid;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg);
+}
+
+.details[open] {
+  padding-bottom: 18px;
+}
+
+.summary {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 20px;
+  font-weight: 600;
+  cursor: default;
+}
+
+summary.summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+summary.summary::-webkit-details-marker {
+  display: none;
+}
+
+/* The +/- the other accordion on the site (the FAQ) uses, so the two read as the same control. */
+summary.summary::after {
+  content: "+";
+  margin-left: auto;
+  font-size: 1.3rem;
+  font-weight: 400;
+  color: var(--color-primary-deep);
+}
+
+.details[open] > summary.summary::after {
+  content: "\2212";
+}
+
+summary.summary:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: -3px;
+  border-radius: var(--radius-card);
+}
+
+.number {
+  flex: none;
+  /* 20px padding + 24px + 14px gap = the 58px the expanded text is indented by, so it lines up under the title. */
+  width: 24px;
+  font-family: var(--font-display), system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--color-primary);
+}
+
+/* Title and week range share a row when there is room; on a narrow screen the range wraps under the title. */
+.heading {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 12px;
+}
+
+.title {
+  flex: 1 1 14rem;
+  min-width: 0;
+}
+
+.body {
+  margin: 0;
+  padding: 0 20px 0 58px;
+  color: var(--color-ink-soft);
+}
+
+.duration {
+  flex: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-ink-soft);
+}
+
+.topics {
+  margin: 10px 0 0;
+  padding: 0 20px 0 78px;
+  color: var(--color-ink-soft);
+}
+
+.topics li + li {
+  margin-top: 4px;
+}

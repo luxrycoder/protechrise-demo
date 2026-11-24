@@ -1,0 +1,30 @@
+.facts {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-card);
+  background: var(--color-bg);
+  overflow: hidden;
+}
+
+.fact {
+  flex: 1 1 170px;
+  padding: 22px 24px;
+  /* Hairlines between items, drawn as an inset shadow so wrapped lines divide cleanly with no doubled borders. */
+  box-shadow: 1px 0 0 0 var(--color-border), 0 1px 0 0 var(--color-border);
+}
+
+.fact dt {
+  margin-bottom: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.fact dd {
+  margin: 0;
+  font-weight: 600;
+}

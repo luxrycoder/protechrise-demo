@@ -1,0 +1,13 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. handleStatusTrackChange, app.js:8133",
+  "request": {
+    "method": "POST",
+    "path": "/api/status/track-change"
+  },
+  "status": 409,
+  "body": {
+    "ok": false,
+    "reason": "window_closed",
+    "error": "The course change window has closed."
+  }
+}

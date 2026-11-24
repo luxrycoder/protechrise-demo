@@ -1,0 +1,28 @@
+.pitch {
+  display: grid;
+  gap: 32px;
+  margin-top: 48px;
+}
+
+@media (min-width: 900px) {
+  .pitch {
+    grid-template-columns: 3fr 2fr;
+    gap: 64px;
+  }
+}
+
+.heading {
+  margin: 0 0 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+.text {
+  margin: 0;
+  max-width: 62ch;
+  font-size: 1.1rem;
+  line-height: 1.65;
+}

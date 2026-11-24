@@ -1,0 +1,12 @@
+{
+  "request": {
+    "method": "POST",
+    "path": "/api/applications",
+    "body": {}
+  },
+  "status": 400,
+  "body": {
+    "ok": false,
+    "error": "Enter a valid first name."
+  }
+}

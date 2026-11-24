@@ -1,0 +1,117 @@
+{
+  "request": {
+    "method": "GET",
+    "path": "/api/tracks"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "cohort": "cohort-1",
+    "tracks": [
+      {
+        "name": "Frontend Development",
+        "slug": "frontend",
+        "category": "Engineering",
+        "blurb": "Build modern, responsive websites and web interfaces from scratch.",
+        "color": "2563EB",
+        "sortOrder": 10
+      },
+      {
+        "name": "Backend Development",
+        "slug": "backend",
+        "category": "Engineering",
+        "blurb": "Build scalable APIs and server-side applications with industry-standard tools.",
+        "color": "7C3AED",
+        "sortOrder": 20
+      },
+      {
+        "name": "Cloud Computing",
+        "slug": "cloud",
+        "category": "Engineering",
+        "blurb": "Deploy and manage cloud infrastructure with AWS, Azure, and GCP fundamentals.",
+        "color": "D97706",
+        "sortOrder": 30
+      },
+      {
+        "name": "Mobile Development",
+        "slug": "mobile",
+        "category": "Engineering",
+        "blurb": "Build iOS and Android apps with React Native and Flutter.",
+        "color": "7C3AED",
+        "sortOrder": 40
+      },
+      {
+        "name": "Data Analytics",
+        "slug": "data",
+        "category": "Data & AI",
+        "blurb": "Analyze data and make smart, data-driven decisions using real-world tools and datasets.",
+        "color": "059669",
+        "sortOrder": 50
+      },
+      {
+        "name": "AI Prompt Engineering",
+        "slug": "ai-prompt",
+        "category": "Data & AI",
+        "blurb": "Master AI prompt optimization, LLM applications, and AI-powered workflows.",
+        "color": "059669",
+        "sortOrder": 60
+      },
+      {
+        "name": "AI Automation",
+        "slug": "ai-auto",
+        "category": "Data & AI",
+        "blurb": "Build n8n workflows, AI integrations, and automation systems for real-world problems.",
+        "color": "059669",
+        "sortOrder": 70
+      },
+      {
+        "name": "Product Management",
+        "slug": "product",
+        "category": "Business & Ops",
+        "blurb": "Lead product strategy and roadmaps. Master user research, Agile, and go-to-market.",
+        "color": "059669",
+        "sortOrder": 80
+      },
+      {
+        "name": "Project Management",
+        "slug": "project",
+        "category": "Business & Ops",
+        "blurb": "Deliver projects on time and on budget. Master Scrum, Kanban, and risk management.",
+        "color": "2563EB",
+        "sortOrder": 90
+      },
+      {
+        "name": "Virtual Assistant",
+        "slug": "virtual",
+        "category": "Business & Ops",
+        "blurb": "Build automation skills for admin, scheduling, and workflow optimization.",
+        "color": "D97706",
+        "sortOrder": 100
+      },
+      {
+        "name": "Digital Marketing",
+        "slug": "marketing",
+        "category": "Business & Ops",
+        "blurb": "Run SEO, paid ads, and social campaigns that turn attention into real business growth.",
+        "color": "D97706",
+        "sortOrder": 110
+      },
+      {
+        "name": "Cybersecurity",
+        "slug": "cyber",
+        "category": "Security",
+        "blurb": "Protect systems and networks. Learn threat detection, ethical hacking, and security ops.",
+        "color": "DC2626",
+        "sortOrder": 120
+      },
+      {
+        "name": "Product Design",
+        "slug": "design",
+        "category": "Design",
+        "blurb": "Design user experiences and interfaces people actually want to use — research, wireframes, and high-fidelity UI.",
+        "color": "7C3AED",
+        "sortOrder": 130
+      }
+    ]
+  }
+}

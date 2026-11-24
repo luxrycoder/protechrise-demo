@@ -1,0 +1,52 @@
+/*
+ * Fixed to the bottom edge. It sits under the site header (z-index 10) but above page content. While it is
+ * visible the page root carries `data-sticky-apply`, which other fixed elements can key off to move clear of it,
+ * e.g. `:root[data-sticky-apply] .whatsapp { bottom: var(--sticky-apply-height) }` (the variable lives in globals.css).
+ */
+.bar {
+  position: fixed;
+  inset-inline: 0;
+  bottom: 0;
+  z-index: 9;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  min-height: var(--sticky-apply-height);
+  padding: 12px max(var(--gutter), env(safe-area-inset-right)) calc(12px + env(safe-area-inset-bottom)) max(var(--gutter), env(safe-area-inset-left));
+  border-top: 1px solid var(--color-border);
+  background: var(--color-bg);
+  box-shadow: 0 -10px 30px -12px rgba(17, 24, 39, 0.28);
+  animation: sticky-apply-in 0.2s ease-out;
+}
+
+.name {
+  min-width: 0;
+  overflow: hidden;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.button {
+  flex: none;
+  padding: 12px 26px;
+  font-size: 1rem;
+}
+
+@keyframes sticky-apply-in {
+  from {
+    transform: translateY(100%);
+  }
+}
+
+/* On phones the track name is secondary: let the button take the row. */
+@media (max-width: 420px) {
+  .name {
+    display: none;
+  }
+
+  .button {
+    flex: 1;
+  }
+}

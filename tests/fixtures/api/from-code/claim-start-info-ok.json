@@ -1,0 +1,28 @@
+{
+  "_source": "Derived by hand from the legacy waitlist-api handler (cannot be recorded without a signed-in session or a real application). Replace with a recording when a test account exists. claimPolicy.startInfo, lib/claim-policy.js:29",
+  "request": {
+    "method": "GET",
+    "path": "/api/claim/start-info?token=TOKEN"
+  },
+  "status": 200,
+  "body": {
+    "ok": true,
+    "firstName": "Ada",
+    "cohortName": "Cohort 1",
+    "feeText": "₦19,500",
+    "currentTrack": "Frontend Development",
+    "tracks": [
+      {
+        "id": 1,
+        "name": "Frontend Development",
+        "slug": "frontend",
+        "category": "Engineering",
+        "blurb": "Build modern, responsive websites.",
+        "color": "2563EB",
+        "sort_order": 10,
+        "active": 1
+      }
+    ],
+    "policyAccepted": false
+  }
+}
