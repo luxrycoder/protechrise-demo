@@ -34,9 +34,17 @@ export function Peep({ slot, size = 180, fill = "mint", flip, className }: Props
     );
   }
   if (style === "peeps") {
+    // Free-standing cut-out with a white die-cut edge and an ink offset shadow: no frame, so it never reads as a card.
     return (
-      <span className={className} aria-hidden="true" style={{ display: "inline-block", width: size, height: size, overflow: "hidden", background: "#fff", border: "2.5px solid #111827", borderRadius: 18, boxShadow: "5px 5px 0 #111827", transform: flipT }}>
-        <Image src={src} alt="" width={400} height={400} unoptimized style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+      <span className={className} aria-hidden="true" style={{ display: "inline-block", width: size * 1.1, transform: flipT }}>
+        <Image
+          src={src}
+          alt=""
+          width={425}
+          height={600}
+          unoptimized
+          style={{ display: "block", width: "100%", height: "auto", filter: "drop-shadow(2.5px 0 0 #fff) drop-shadow(-2.5px 0 0 #fff) drop-shadow(0 2.5px 0 #fff) drop-shadow(0 -2.5px 0 #fff) drop-shadow(5px 6px 0 #111827)" }}
+        />
       </span>
     );
   }
